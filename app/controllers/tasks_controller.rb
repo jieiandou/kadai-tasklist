@@ -11,7 +11,7 @@ class TasksController < ApplicationController
     @task = Task.new
   end
 
- def create
+  def create
     @task = Task.new(task_params)
 
     if @task.save
@@ -44,10 +44,10 @@ class TasksController < ApplicationController
     @task.destroy
 
     flash[:success] = 'Task は正常に削除されました'
-    redirect_to task_url
+    redirect_to tasks_url
   end
 
-　private
+  private
 
   # Strong Parameter
   def task_params
